@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
-*{
+*, ::before, ::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,23 +22,97 @@ main{
     background: powderblue;
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .card-wrapper{
     max-width: 90rem;
     width: 100%;
-    min-height: 100vh;
-    /* background: var(--very-dark-blue-mb); */
+    height: 42rem;
+    background: var(--very-dark-blue-mb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card{
-
+    display: flex;
+    background: var(--dark-desaturated-blue-cb);
+    border-radius: .8rem;
+    overflow: hidden;
 }
 
 .article{
-
+    padding: 5rem;
+    flex-basis: 50%;
 }
 
-.article h1{
-    color: #fff;
+h1{
+    color: var(--white-mh);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.pink{
+    color: var(--soft-violet-accent);
+}
+
+.discription{
+    color: var(--slightly-transparent-white-sh);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+    padding-right: 7rem;
+}
+
+.assets{
+    display: flex;
+    margin-top: 5.5rem;
+}
+
+.number-block{
+    color: var(--white-mh);
+    margin-right: 4rem;
+}
+
+.number-block h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+
+.number-block p{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.938rem;
+    line-height: 2rem;
+    color: var(--slightly-transparent-white-sh);
+    letter-spacing: 1PX;
+}
+
+.img-wrapper{
+    flex-basis: 50%;
+}
+
+.img-wrapper .img{
+    background-image: url(./img/image-header-desktop.jpg);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.img-wrapper .img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--soft-violet-accent);
+    opacity: .5;
 }
