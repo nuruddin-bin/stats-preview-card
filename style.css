@@ -149,3 +149,18 @@ main{
         display: block;
     }
 }
+
+.doge{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(-90deg);
+    width: 30%;
+    transition: .3s ease-in;
+    opacity: 0;
+}
+
+.img-wrapper:hover .doge{
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+    opacity: 1;
+}
